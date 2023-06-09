@@ -14,4 +14,9 @@ patchesStrategicMerge:
     AM_STORES_CTS_SERVERS: ds-idrepo-0.ds-idrepo:1636
     AM_STORES_USER_SERVERS: ds-idrepo-0.ds-idrepo:1636
 
-
+generatorOptions:
+  disableNameSuffixHash: true
+secretGenerator: 
+- name: rcs-cert
+  files: 
+  - ./certs/rcs-cert.pem

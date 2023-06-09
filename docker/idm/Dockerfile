@@ -15,4 +15,9 @@ ENV JAVA_OPTS -XX:MaxRAMPercentage=65 -XX:InitialRAMPercentage=65 -XX:MaxTenurin
 ARG CONFIG_PROFILE=cdk
 RUN echo "\033[0;36m*** Building '${CONFIG_PROFILE}' profile ***\033[0m"
 COPY --chown=forgerock:root config-profiles/${CONFIG_PROFILE}/ /opt/openidm
+COPY --chown=forgerock:root lib/*.jar /opt/openidm/connectors
+COPY --chown=forgerock:root lib/*.jar /opt/openidm/bundle
+COPY --chown=forgerock:root scripts /opt/openidm/bin/defaults/script
 COPY --chown=forgerock:root . /opt/openidm
+
+RUN chmod +x /opt/openidm/add-certs-to-truststore.sh

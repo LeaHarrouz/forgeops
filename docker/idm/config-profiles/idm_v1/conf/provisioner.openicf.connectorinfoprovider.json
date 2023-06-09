@@ -1,0 +1,38 @@
+{
+  "connectorsLocation": "connectors",
+  "enabled": true,
+  "remoteConnectorServers": [
+    {
+      "connectionGroupCheckInterval": 900,
+      "displayName": "rcs1",
+      "enabled": true,
+      "host": "openldap.com",
+      "housekeepingInterval": 600,
+      "key": {
+        "$crypto": {
+          "type": "x-simple-encryption",
+          "value": {
+            "cipher": "AES/CBC/PKCS5Padding",
+            "data": "7TdU/nH4vVS5iuDsPEnOow==",
+            "iv": "cQ4V76nFCD48O9EJRrJOLw==",
+            "keySize": 16,
+            "mac": "8+5QhdWFxrS1XOZEFUQubQ==",
+            "purpose": "idm.config.encryption",
+            "salt": "BQ/V6aSSV9q7A/8NIaiaPQ==",
+            "stableId": "openidm-sym-default"
+          }
+        }
+      },
+      "name": "rcs1",
+      "pingPongInterval": 300,
+      "port": 8759,
+      "proxyHost": null,
+      "proxyPassword": null,
+      "proxyPort": 8080,
+      "proxyUser": null,
+      "type": "remoteConnectorServer",
+      "useSSL": false,
+      "webSocketConnections": 2
+    }
+  ]
+}
